@@ -1,0 +1,4 @@
+channel,accepted_n,resamples,mae_ci_low_ms,mae_ci_high_ms,ccc_ci_low,ccc_ci_high
+pleth_1,15,10000,1.99,8.17,0.694,0.963
+pleth_2,20,10000,3.24,7.26,0.445,0.936
+pleth_3,20,10000,2.25,6.77,0.646,0.971

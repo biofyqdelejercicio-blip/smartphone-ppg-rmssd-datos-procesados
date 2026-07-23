@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Citation of the accompanying manuscript and archived software release is requested."
+title: "PPG interval reconstruction and RMSSD estimation at 30 and 60 Hz"
+type: software
+version: 1.0.1
+date-released: 2026-07-23
+doi: "10.5281/zenodo.21501595"
+url: "https://doi.org/10.5281/zenodo.21501595"
+authors:
+  - family-names: "Hernández-García"
+    given-names: "Facundo"
+    orcid: "https://orcid.org/0000-0003-0860-0943"
+  - family-names: "Meléndez-Gallardo"
+    given-names: "José"
+    orcid: "https://orcid.org/0000-0002-7025-8344"
+  - family-names: "Camejo-Alvarez"
+    given-names: "Miguel Ángel"
+    orcid: "https://orcid.org/0009-0002-3096-679X"
+repository-code: "https://github.com/biofyqdelejercicio-blip/finger-ppg-rmssd-reconstruction"
+license: MIT
+keywords:
+  - photoplethysmography
+  - heart-rate variability
+  - RMSSD
+  - external validation
+  - signal processing
