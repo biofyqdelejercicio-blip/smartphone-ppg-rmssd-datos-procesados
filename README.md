@@ -1,6 +1,6 @@
 # PPG interval reconstruction and RMSSD estimation at 30 and 60 Hz
 
-Code, frozen models, derived results, and documentation associated with the manuscript **“Development and external validation under controlled rest of an algorithm to reconstruct pulse-to-pulse intervals and estimate heart rate and RMSSD from finger photoplethysmography.”**
+Research code, frozen models, derived results, and documentation for the manuscript **“Development and external validation of an algorithm for reconstructing pulse-to-pulse intervals and estimating heart rate and RMSSD from finger photoplethysmography under controlled resting conditions.”**
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21501595.svg)](https://doi.org/10.5281/zenodo.21501595)
 
@@ -8,7 +8,7 @@ Code, frozen models, derived results, and documentation associated with the manu
 
 The study evaluated contact finger photoplethysmography acquired with instrumental sensors and resampled to 30 and 60 Hz. These sampling rates were selected for their compatibility with common smartphone frame rates. No RGB signal was acquired from a smartphone camera. The study therefore does not establish the validity of smartphone-camera PPG.
 
-The frozen algorithm reconstructs pulse-to-pulse intervals from low-resolution PPG, applies an interval-quality classifier and correction model, and estimates heart rate and RMSSD. The intended domain is a seated, awake, still, 60-second recording. The UTSA office analysis is reported separately as an out-of-domain stress test.
+The frozen algorithm reconstructs pulse-to-pulse intervals from resampled PPG, applies an interval-quality classifier and timing-correction model, and estimates heart rate and RMSSD. The intended domain is a 60-second recording acquired while the participant is seated, awake, and still. The UTSA office analysis is reported separately as an out-of-domain stress test.
 
 ## Main results
 
@@ -65,14 +65,14 @@ The scripts use the frozen model in `models/frozen_candidate_v1_models.joblib.xz
 
 ## Data availability and archiving
 
-The repository contains only derived, non-identifying results. Raw physiological signals remain in their original repositories and are governed by the corresponding access and licensing terms. The version history is permanently archived in Zenodo under concept DOI [10.5281/zenodo.21501595](https://doi.org/10.5281/zenodo.21501595).
+The repository contains only derived, non-identifying results. Raw physiological signals remain in their original repositories and are governed by the corresponding access and licensing terms. Released versions are archived in Zenodo under concept DOI [10.5281/zenodo.21501595](https://doi.org/10.5281/zenodo.21501595).
 
 ## Citation
 
-Hernández-García F, Meléndez-Gallardo J, Camejo-Alvarez MÁ. *PPG interval reconstruction and RMSSD estimation at 30 and 60 Hz*. Version 1.0.2. Zenodo; 2026. [https://doi.org/10.5281/zenodo.21501595](https://doi.org/10.5281/zenodo.21501595).
+Hernández-García F, Meléndez-Gallardo J, Camejo-Alvarez MÁ. *PPG interval reconstruction and RMSSD estimation at 30 and 60 Hz*. Version 1.0.2. Zenodo; 2026. [https://doi.org/10.5281/zenodo.21502666](https://doi.org/10.5281/zenodo.21502666).
 
 Machine-readable citation metadata are provided in [`CITATION.cff`](CITATION.cff).
 
 ## License
 
-The original code in this repository is distributed under the MIT License. The included derived results remain subject to citation of the original datasets. This license does not relicense third-party data.
+The original code in this repository is distributed under the MIT License. Use of the derived results should include appropriate citation of the source datasets. The MIT License does not apply to third-party data.

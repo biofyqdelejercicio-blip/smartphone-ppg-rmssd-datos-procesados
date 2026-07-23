@@ -12,4 +12,4 @@ Raw third-party recordings are not redistributed. Access, licensing, and citatio
 | Vollmer RR-interval/PPG data | Secondary external replication | [PhysioNet](https://doi.org/10.13026/chd5-t946) |
 | UTSA multimodal dataset | Development subset and out-of-domain office stress test | [Official repository](https://github.com/utsanpb2-234/UTSA-PPG), [dataset article](https://doi.org/10.1109/ICHI64645.2025.00042) |
 
-Dataset directory structures are validated by the evaluation scripts. The software performs no automatic download and transmits no participant-level signals.
+The evaluation scripts validate the expected directory structure after each dataset has been obtained from its original source. They neither download datasets automatically nor upload participant-level signals.

@@ -4,8 +4,8 @@ title: "PPG interval reconstruction and RMSSD estimation at 30 and 60 Hz"
 type: software
 version: 1.0.2
 date-released: 2026-07-23
-doi: "10.5281/zenodo.21501595"
-url: "https://doi.org/10.5281/zenodo.21501595"
+doi: "10.5281/zenodo.21502666"
+url: "https://doi.org/10.5281/zenodo.21502666"
 authors:
   - family-names: "Hernández-García"
     given-names: "Facundo"

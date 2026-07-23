@@ -2,14 +2,14 @@
 
 ## Intended use and limits
 
-The candidate was designed for a 60-second contact finger-PPG segment recorded while the participant is seated, awake, and still. The algorithm operates at 30 and 60 Hz and requires agreement between both resolutions. The selected rates do not convert the source signal into smartphone-camera PPG and do not validate RGB acquisition, illumination, compression, exposure control, rolling shutter, or device-dependent camera processing.
+The candidate was designed for a 60-second contact finger-PPG segment recorded while the participant is seated, awake, and still. The algorithm operates at 30 and 60 Hz and requires agreement between both resolutions. Processing instrumental PPG at these rates addresses temporal sampling compatibility only. It does not constitute validation of smartphone-camera PPG or of RGB acquisition, illumination, compression, exposure control, rolling shutter, or device-dependent camera processing.
 
-The UTSA office condition included computer or telephone use, conversation, drinking water, and walking. It is therefore treated as an out-of-domain dynamic-office stress test, not as an isolated hand-motion experiment.
+The UTSA office condition included computer or telephone use, conversation, drinking water, and walking. It is therefore treated as an out-of-domain stress test involving dynamic office activity, not as an isolated hand-motion experiment.
 
 ## Frozen processing specification
 
 1. Analysis of the same 60-second segment at 30 and 60 Hz.
-2. Third-order 0.55–3.5 Hz Butterworth band-pass filtering.
+2. Third-order, zero-phase 0.55–3.50 Hz Butterworth band-pass filtering.
 3. Signal-polarity selection based on agreement between spectral and peak-derived rates.
 4. Three-point parabolic interpolation of detected peaks.
 5. Calculation of 14 local interval and amplitude features.
@@ -17,17 +17,17 @@ The UTSA office condition included computer or telephone use, conversation, drin
 7. Pulse-interval correction with the frozen Extra Trees regressor.
 8. Minimum accepted-interval fraction of 0.70 and at least 30 consecutive accepted pairs at each resolution.
 9. SQI threshold of 0.65 at both resolutions; SQI 0.75 was evaluated as a sensitivity analysis.
-10. Agreement between 30 and 60 Hz estimates, defined as a heart-rate difference <= 2 beats/min and an RMSSD difference <= 5 ms or <= 10% of the paired mean.
+10. Agreement between 30 and 60 Hz estimates, defined as a heart-rate difference ≤2 beats/min and an RMSSD difference ≤5 ms or ≤10% of the paired mean.
 
-The ECG NN reference rule accepts 0.30–2.00 second intervals whose deviation from the local median is no greater than the larger of 20% or 35 ms. Indices are preserved so RMSSD uses only truly consecutive accepted intervals.
+The ECG NN reference rule accepts 0.30–2.00 second intervals whose deviation from the local median is no greater than the larger of 20% of that median or 35 ms. Original indices are preserved so that RMSSD is calculated only from truly consecutive accepted intervals.
 
 The fourth SQI component measures robust consistency of detected pulse amplitudes. The historical output column is named `sqi_prominence` for compatibility with the frozen result files.
 
 ## Model provenance
 
-The two frozen models were trained on the designated development data from Li, BIDMC, and stable UTSA conditions. Welltory and WF-PPG contributed to exploratory development but were not external-validation cohorts. The cached model has separate classifiers and regressors for 30 and 60 Hz. Its metadata fingerprint is stored beside the model. External PTT-PPG, Vollmer, and UTSA office records are never used for refitting or threshold selection by the evaluation scripts.
+The two frozen models were trained on the designated development data from Li, BIDMC, and stable UTSA conditions. Welltory and WF-PPG contributed to exploratory development but were not external-validation cohorts. The distributed model has separate classifiers and regressors for 30 and 60 Hz, and its metadata fingerprint is stored beside the model. The evaluation scripts do not use PTT-PPG, Vollmer, or UTSA office records for refitting or threshold selection.
 
-The internal freeze date documents the development workflow but is not claimed as prospective registration. The model checksum establishes artifact integrity; it does not by itself prove that the external datasets were unseen.
+The recorded freeze date forms part of the development audit trail and does not constitute a prospective registration. The model checksum verifies artifact integrity only.
 
 ## Evaluation roles
 
@@ -36,6 +36,6 @@ The internal freeze date documents the development workflow but is not claimed a
 - **UTSA office:** out-of-domain stress test, five fixed-position windows per recording and channel.
 - **Corrected NN-index audit:** explicitly post hoc sensitivity analysis conducted after freezing.
 
-## Reproducibility boundary
+## Reproducibility
 
-The repository distributes the frozen model, exact derived outputs, and deterministic evaluation code. Raw physiological datasets are not redistributed. Reproduction therefore also depends on the availability and original formatting of the cited third-party datasets and on the pinned Python package versions.
+The repository provides the frozen model, the derived outputs used in the reported analyses, and deterministic evaluation code. Raw physiological datasets are not redistributed. Reproduction therefore also depends on the availability and original structure of the cited third-party datasets and on the specified Python package versions.

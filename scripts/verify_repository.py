@@ -1,4 +1,4 @@
-"""Verify artifact integrity, model structure, and manuscript-result invariants."""
+"""Verify artifact integrity, model structure, and reported result values."""
 
 from __future__ import annotations
 

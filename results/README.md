@@ -9,4 +9,4 @@ This directory contains non-identifying derived outputs used in the manuscript.
 
 The primary decision threshold is SQI >= 0.65. SQI >= 0.75 is a sensitivity analysis, not a replacement decision rule.
 
-`primary_external/ptt_bootstrap_ci.csv` records the participant-level 10,000-resample confidence intervals reported in Table 3 of the manuscript. It is retained as an archived statistical output alongside the record-level data used to calculate it.
+`primary_external/ptt_bootstrap_ci.csv` contains the participant-level confidence intervals based on 10,000 bootstrap resamples and reported in Table 3 of the manuscript. The corresponding record-level data are provided in the same directory.

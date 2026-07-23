@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ppg-rmssd-reconstruction"
 version = "1.0.2"
-description = "Frozen algorithm for pulse-to-pulse interval reconstruction and RMSSD estimation from contact finger PPG at 30 and 60 Hz"
+description = "Pulse-to-pulse interval reconstruction and RMSSD estimation from contact finger PPG at 30 and 60 Hz"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
