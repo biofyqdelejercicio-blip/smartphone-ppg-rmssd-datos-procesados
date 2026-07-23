@@ -69,7 +69,7 @@ The repository contains only derived, non-identifying results. Raw physiological
 
 ## Citation
 
-Hernández-García F, Meléndez-Gallardo J, Camejo-Alvarez MÁ. *PPG interval reconstruction and RMSSD estimation at 30 and 60 Hz*. Version 1.0.1. Zenodo; 2026. [https://doi.org/10.5281/zenodo.21501595](https://doi.org/10.5281/zenodo.21501595).
+Hernández-García F, Meléndez-Gallardo J, Camejo-Alvarez MÁ. *PPG interval reconstruction and RMSSD estimation at 30 and 60 Hz*. Version 1.0.2. Zenodo; 2026. [https://doi.org/10.5281/zenodo.21501595](https://doi.org/10.5281/zenodo.21501595).
 
 Machine-readable citation metadata are provided in [`CITATION.cff`](CITATION.cff).
 
